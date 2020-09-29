@@ -1,0 +1,11 @@
+
+//bind menu,set icon tint
+@Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.orientation_menu,menu);
+        Drawable drawable=getResources().getDrawable(R.drawable.ic_hori_verti);
+        drawable.setColorFilter(getResources().getColor(R.color.colorWhite), PorterDuff.Mode.SRC_ATOP);
+        menu.findItem(R.id.orientation).setIcon(drawable);
+        return super.onCreateOptionsMenu(menu);
+    }
